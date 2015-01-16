@@ -1,0 +1,9 @@
+web:
+    build: .
+    command: php -S 0.0.0.0:8000 index.php
+    links:
+        - db
+    ports:
+        - "8000:8000"
+db:
+    image: tutum/mysql:5.6
